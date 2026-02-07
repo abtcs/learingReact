@@ -47,7 +47,7 @@ export default function App() {
           <h2>Enter city to see weather</h2>
           <input
             type="text"
-            placeholder="Enter city name From Account B: "
+            placeholder="Enter city name From Account C: "
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
