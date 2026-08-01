@@ -4,6 +4,7 @@ import DarkMode from './DarkMode';
 import CounterApp from './CounterApp';
 import RouteMethod1 from './RouteMethod1';
 import { ProductDetail } from './ProductDetail';
+import CheckoutButton from './handlePayment';
 import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom';
 
 const productsDetails = [
@@ -47,6 +48,16 @@ function CartScreen() {
   return <Cart onBack={() => navigate('/products')} />;
 }
 
+function Success() {
+  return (
+    <div style={{ padding: '20px' }}>
+      <h2>✅ Payment Successful</h2>
+      <p>Your order is complete. Thank you for your purchase!</p>
+      <Link to="/products">Back to Shop</Link>
+    </div>
+  );
+}
+
 const appRoutes = [
   { path: '/', element: <Shop />, label: 'Shop', showInNav: true },
   { path: '/products', element: <Shop /> },
@@ -56,6 +67,8 @@ const appRoutes = [
   { path: '/counter-app', element: <CounterApp />, label: 'Counter App', showInNav: true },
   { path: '/route-method1/*', element: <RouteMethod1 />, label: 'Routing Method 1', showInNav: true },
   { path: '/product/:id', element: <ProductDetail /> },
+  { path: '/handlepayment', element: <CheckoutButton />, label: 'Handle Payment', showInNav: true },
+  { path: '/success', element: <Success /> },
 ];
 
 function AppRoutes() {
