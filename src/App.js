@@ -5,6 +5,8 @@ import CounterApp from './CounterApp';
 import RouteMethod1 from './RouteMethod1';
 import { ProductDetail } from './ProductDetail';
 import CheckoutButton from './handlePayment';
+import Products from './Products';
+import Users from './Users';
 import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom';
 
 const productsDetails = [
@@ -69,6 +71,8 @@ const appRoutes = [
   { path: '/product/:id', element: <ProductDetail /> },
   { path: '/handlepayment', element: <CheckoutButton />, label: 'Handle Payment', showInNav: true },
   { path: '/success', element: <Success /> },
+  { path: '/users', element: <Users />, label: 'Users', showInNav: true },
+  { path: '/products-list', element: <Products />, label: 'Products List', showInNav: true },
 ];
 
 function AppRoutes() {
