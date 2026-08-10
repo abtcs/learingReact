@@ -7,6 +7,7 @@ import { ProductDetail } from './ProductDetail';
 import CheckoutButton from './handlePayment';
 import Products from './Products';
 import Users from './Users';
+import Lazy from './Lazy';
 import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom';
 
 const productsDetails = [
@@ -73,6 +74,7 @@ const appRoutes = [
   { path: '/success', element: <Success /> },
   { path: '/users', element: <Users />, label: 'Users', showInNav: true },
   { path: '/products-list', element: <Products />, label: 'Products List', showInNav: true },
+  { path: '/lazy', element: <Lazy />, label: 'Lazy Load Users', showInNav: true },
 ];
 
 function AppRoutes() {
